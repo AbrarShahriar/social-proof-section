@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+// &display=swap
+
+html body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+
+    background: url('/images/bg-pattern-bottom-desktop.svg') no-repeat;
+    background-size: cover;
+
+    * {
+        // outline: 2px solid red;
+    }
+}
+
+.svg {
+    position: absolute;
+    object-fit: cover;
+    width: calc(200px + 25%);
+}
+
+.container {
+    // outline: 2px solid blue;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title-branding {
+    // outline: 2px solid black;
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px 20px;
+
+    .title-container {
+        // outline: 2px solid red;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: hsl(300, 43%, 22%);
+            // outline: 2px solid red;
+
+        }
+        span {
+            line-height: 1.5rem;
+            // outline: 2px solid red;
+            font-weight: 400;
+            margin-top: -100px;
+        }
+    }
+
+    .branding-container {
+        // outline: 2px solid red;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+
+        .rating {
+            // outline: 2px solid red;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            margin: 20px 10px;
+            background-color: hsl(300, 24%, 96%);
+
+            .stars {
+                margin-bottom: 10px;
+                img {
+                    object-fit: cover;
+                    padding: 0 5px;
+                }
+            }
+
+            span {
+                color: hsl(300, 43%, 22%);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.reviews {
+    // outline: 2px solid red;
+    padding: 10px;
+
+    .review {
+        padding: 30px;
+        background: hsl(300, 43%, 22%);
+        color: white;
+        margin: 30px 0;
+        border-radius: 10px;
+
+        .text {
+            line-height: 1.5rem;
+        }
+        
+        .user-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 30px;
+            margin-top: 10px;
+
+            img {
+                object-fit: cover;
+                width: 50px;
+                clip-path: circle();
+            }
+
+            .name-prof {
+                display: flex;
+                flex-direction: column;
+                margin-left: 25px;
+
+                .name {
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+
+                .prof {
+                    color: hsl(303, 10%, 53%);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .svg {
+        width: auto;
+    }
+
+    .reviews {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 10px;
+
+    
+        .review-container {
+            // outline: 2px solid green;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+
+            .review {
+                padding: 30px;
+                margin: 0 15px;
+                width: 320px;
+                height: 200px;
+            }
+        }
+        
+        .rv-one {
+            &::after {
+                content: '';
+                // outline: 2px solid green;
+                width: 20px;
+                height: 200px;
+            }
+        }
+        .rv-two {
+            &::before, &::after {
+                content: '';
+                // outline: 2px solid red;
+                width: 20px;
+                height: 100px;
+            }
+        }
+        .rv-three {
+            &::before {
+                content: '';
+                // outline: 2px solid green;
+                width: 20px;
+                height: 200px;
+            }
+        }
+
+        
+    }
+
+    .title-branding {
+        // outline: 2px solid black;
+        text-align: left;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0px 20px 50px 0px;
+    
+        .title-container {
+            width: 400px;
+            height: 220px;
+            padding: 10px;
+        }
+    
+        .branding-container {
+            width: 500px;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-right: 100px;
+            padding: 20px;
+            // outline: 2px solid black;
+
+            
+            .rating-container {
+                // outline: 2px solid black;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+
+                .rating {
+                    // outline: 2px solid blue;
+                    padding: 20px;
+                    width: 450px;
+                    flex-direction: row;
+                    align-items: center;
+                    margin: 10px 0px;
+                    background-color: hsl(300, 24%, 96%);
+                    
+                    
+        
+                    .stars {
+                        // outline: 2px solid red;
+                        margin-left: 10px;
+                        margin-right: 0;
+                        margin-bottom: 0;
+                        width: 170px;
+                        img {
+                            object-fit: cover;
+                            padding: 0 2px;
+                        }
+                    }
+        
+                    span {
+                        width: 300px;
+                        margin-right: 20px;
+                        // outline: 2px solid red;
+                        color: hsl(300, 43%, 22%);
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .rc-one {
+                &::after {
+                    content: '';
+                    // outline: 2px solid blue;
+                    width: 120px;
+                    height: 20px;
+                }
+            }
+            .rc-two {
+                &::before, &::after {
+                    content: '';
+                    // outline: 2px solid blue;
+                    width: 60px;
+                    height: 20px;
+                }
+            }
+            .rc-three {
+                &::before {
+                    content: '';
+                    // outline: 2px solid blue;
+                    width: 120px;
+                    height: 20px;
+                }
+            }
+            
+        }
+    }
+}
